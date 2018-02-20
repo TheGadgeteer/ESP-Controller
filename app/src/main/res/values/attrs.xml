@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AxisController">
+        <attr name="Orientation" format="enum" >
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="controllerWidth" format="integer" use="required"/>
+        <attr name="controllerHeight" format="integer" use="required"/>
+        <attr name="defaultValue" format="integer"/>
+        <attr name="minValue" format="integer" use="required"/>
+        <attr name="maxValue" format="integer" use="required" />
+        <attr name="resetOnRelease" format="boolean" />
+    </declare-styleable>
+</resources>

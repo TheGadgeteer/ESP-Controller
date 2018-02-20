@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundSettings"
+    tools:context="severin.espcontroller.SettingsActivity">
+
+    <TextView
+        android:id="@+id/textIPAddress"
+        android:layout_width="96dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="IP Address"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSensitivity" />
+
+    <TextView
+        android:id="@+id/textPort"
+        android:layout_width="96dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Port"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIPAddress" />
+
+    <TextView
+        android:id="@+id/textSensitivity"
+        android:layout_width="211dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/settings_ratio"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDisconnect" />
+
+    <Button
+        android:id="@+id/buttonDisconnect"
+        android:layout_width="240dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="onDisconnect"
+        android:text="Disconnect"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onReset"
+        android:text="Reset to default Settings"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editPort"
+        android:layout_width="220dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#A0A0A0"
+        android:ems="10"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:onClick="onPortChanged"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/textPort"
+        app:layout_constraintTop_toBottomOf="@+id/editIPAddress" />
+
+    <EditText
+        android:id="@+id/editIPAddress"
+        android:layout_width="220dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="32dp"
+        android:background="#A0A0A0"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:onClick="onIPChanged"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/textIPAddress"
+        app:layout_constraintTop_toTopOf="@+id/textIPAddress" />
+
+    <SeekBar
+        android:id="@+id/barSensitivity"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="451dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/backgroundSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSensitivity" />
+
+    <EditText
+        android:id="@+id/textSens"
+        android:layout_width="51dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#A0A0A0"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        android:onClick="onSensChanged"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/barSensitivity"
+        app:layout_constraintEnd_toEndOf="@+id/barSensitivity"
+        app:layout_constraintStart_toStartOf="@+id/barSensitivity" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ESP Controller</string>
+    <string name="connecting">Connecting...</string>
+    <string name="connected">Connected</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="settings_ratio">Maximum v2/v1 Variance</string>
+</resources>

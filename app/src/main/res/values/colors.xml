@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF101010</color>
+    <color name="colorPrimaryDark">#A0101010</color>
+    <color name="colorAccent">#FF00FF00</color>
+    <color name="green">#FF00FF00</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="darkYellow">#e6e600</color>
+    <color name="red">#FFFF0000</color>
+    <color name="darkRed">#FF280909</color>
+    <color name="black">#000000</color>
+
+    <color name="colorSwitch">#FFA0A0A0</color>
+    <color name="controllerOval">#FF050505</color>
+    <color name="controllerLine">#FF00FF00</color>
+
+    <color name="backgroundSettings">#FF101010</color>
+    <color name="backgroundMain">#FF404040</color>
+</resources>
