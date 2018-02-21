@@ -116,7 +116,7 @@ public class AxisController extends View {
     }
 
     public void setValue(int val) {
-        this.value = val;
+        this.value = Math.min(maxValue,Math.max(minValue, val));
         resetCursor();
 
         invalidate();

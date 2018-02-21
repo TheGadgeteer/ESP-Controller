@@ -16,8 +16,8 @@ public class SteeringManager implements AxisControllerListener, CompoundButton.O
     private float dirMaxMargin = 1f;
     private ESP_Client client = ESP_Client.instance();
 
-    AxisController dirController, speedController;
-    Switch engineSwitch, speedModeSwitch;
+    private AxisController dirController = null, speedController = null;
+    private Switch engineSwitch, speedModeSwitch;
 
     private boolean steeringEnabled = false;
 
@@ -30,7 +30,6 @@ public class SteeringManager implements AxisControllerListener, CompoundButton.O
     }
 
     private SteeringManager() {
-
     }
 
     public void setDirController(AxisController c) {
@@ -41,6 +40,8 @@ public class SteeringManager implements AxisControllerListener, CompoundButton.O
     }
 
     public void setSpeedController(AxisController c) {
+        if(speedController != null)
+            c.setValue(speedController.getValue());   //keep current Value of speedController
         this.speedController = c;
         c.addAxisControllerListener(this);
         c.setDefaultValue(0);
@@ -131,6 +132,7 @@ public class SteeringManager implements AxisControllerListener, CompoundButton.O
      */
     @Override
     public void onValueChanged(AxisController l, int value) {
+        System.out.println("Value speedController: " + speedController.getValue());
         if (speedController == null || dirController == null)
             return;
         int factor = speedController.getMaxValue() == 1 ? ESP_Client.maxSpeed : 1; //if speedController is in speed mode, multiply the speed

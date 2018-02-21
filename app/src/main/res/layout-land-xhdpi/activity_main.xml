@@ -125,8 +125,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         custom:Orientation="horizontal"
         custom:defaultValue="100"
-        custom:maxValue="500"
-        custom:minValue="-400"
+        custom:maxValue="300"
+        custom:minValue="-100"
         custom:resetOnRelease="true" />
 
     <TextView

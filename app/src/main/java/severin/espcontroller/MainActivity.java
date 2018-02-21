@@ -45,11 +45,6 @@ public class MainActivity extends AppCompatActivity implements Observer, AxisCon
         speedController.addAxisControllerListener(this);
         dirController.addAxisControllerListener(this);
 
-        speedController.setMinValue(-ESP_Client.maxSpeed);
-        speedController.setMaxValue(ESP_Client.maxSpeed);
-        speedController.setValue(speedController.getDefaultValue());
-        dirController.setValue(dirController.getDefaultValue());
-
         client = ESP_Client.instance();
         client.addObserver(this);
 
